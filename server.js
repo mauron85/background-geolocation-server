@@ -18,6 +18,14 @@ app.post('/locations', function(request, response){
     response.sendStatus(200);
 });
 
+app.post('/sync', function(request, response){
+    //console.log('Headers:\n', request.headers);
+    console.log('Synced Locations:\n', request.body);
+    console.log('------------------------------');
+    io.emit('locations', request.body);
+    response.sendStatus(200);
+});
+
 io.on('connection', function(socket){
   console.log('a user connected');
 });
