@@ -2,6 +2,14 @@
 
 renders positions updates on map
 
+## Clone repo
+
+```
+git clone https://github.com/mauron85/cordova-bg-server
+
+cd cordova-bg-server
+```
+
 ## Install required dependencies
 
 ```
@@ -40,6 +48,11 @@ backgroundGeolocation.configure(
 
 backgroundGeolocation.start();
 ```
+
+## Mocking locations
+There is Lockito app on play store to mock actual routes:
+
+https://play.google.com/store/apps/details?id=fr.dvilleneuve.lockito
 
 ## Visit url in the browser
 ```
