@@ -68,8 +68,8 @@ lr.on('line', function(line) {
       : DEFAULT_SPEED_IN_KM_PER_HOUR;
 
   var command = [
-    'gps setlatitude ' + String(lat).replace('.', ','),
-    'gps setlongitude ' + String(lon).replace('.', ',')
+    'gps setlatitude ' + String(lat).replace('.', '.'),
+    'gps setlongitude ' + String(lon).replace('.', '.')
   ].join('\n');
   genyShell.stdin.write(command + '\n');
 
