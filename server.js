@@ -6,6 +6,12 @@ var io         = require('socket.io')(http);
 // parse application/json
 app.use(bodyParser.json({ type : '*/*' })); // force json
 
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
