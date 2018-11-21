@@ -17,7 +17,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/locations', function(request, response){
-    //console.log('Headers:\n', request.headers);
+    console.log('Headers:\n', request.headers);
     console.log('Locations:\n', request.body);
     console.log('------------------------------');
     io.emit('locations', request.body);
@@ -25,7 +25,7 @@ app.post('/locations', function(request, response){
 });
 
 app.post('/sync', function(request, response){
-    //console.log('Headers:\n', request.headers);
+    console.log('Headers:\n', request.headers);
     console.log('Synced Locations:\n', request.body);
     console.log('------------------------------');
     io.emit('locations', request.body);
